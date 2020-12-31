@@ -146,14 +146,12 @@ div.material-table .table-title {
 }
 
 div.material-table table tr td {
-    padding: 0 0 0 56px;
+    padding: 15px;
     height: 48px;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.87);
     border-bottom: solid 1px #DDDDDD;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 div.material-table table tr td a {
@@ -175,9 +173,9 @@ div.material-table table th {
     color: #757575;
     cursor: pointer;
     white-space: nowrap;
-    padding: 0;
+    padding: 15px;
     height: 56px;
-    padding-left: 56px;
+    padding-left: 15px;
     vertical-align: middle;
     outline: none !important;
 }
@@ -221,12 +219,8 @@ div.material-table table tbody tr:hover {
     background-color: #EEE;
 }
 
-div.material-table table th:first-child,
-div.material-table table td:first-child {
-    padding: 0 0 0 24px;
-}
-
-div.material-table table th:last-child,
-div.material-table table td:last-child {
-    padding: 0 14px 0 0;
+th,
+tr,
+td {
+    overflow: scroll;
 }
