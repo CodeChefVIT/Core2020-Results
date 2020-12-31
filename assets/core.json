@@ -30,6 +30,11 @@
         "domain": "Design"
     },
     {
+        "name": "ANSH SHARMA",
+        "regNo": "19BCI0025",
+        "domain": "Competitive Coding"
+    },
+    {
         "name": "ANTRANG AGRAWAL",
         "regNo": "20BCI0262",
         "domain": "Frontend Web Development"
@@ -100,6 +105,11 @@
         "domain": "Competitive Coding"
     },
     {
+        "name": "Diya Aryal",
+        "regNo": "19BCE2618",
+        "domain": "Management"
+    },
+    {
         "name": "EESHANI MAJUMDER",
         "regNo": "20BCE0607",
         "domain": "Editorial"
@@ -138,6 +148,11 @@
         "name": "Jay Kaoshik",
         "regNo": "20BCT0258",
         "domain": "Competitive Coding"
+    },
+    {
+        "name": "KABIR WADHWA",
+        "regNo": "19BCE2359",
+        "domain": "Unity (AR)"
     },
     {
         "name": "KADAMBARI CHIKARA",
@@ -195,6 +210,16 @@
         "domain": "Frontend Web Development"
     },
     {
+        "name": "Rasswanth S",
+        "regNo": "19BBS0171",
+        "domain": "Machine Learning"
+    },
+    {
+        "name": "RISHABH MISHRA",
+        "regNo": "19BCE2088",
+        "domain": "Mobile App Development"
+    },
+    {
         "name": "Rishabh Rathi",
         "regNo": "20BDS0093",
         "domain": "Machine Learning & Competitive Coding"
@@ -210,6 +235,11 @@
         "domain": "Management"
     },
     {
+        "name": "RIYA KUMAR",
+        "regNo": "19BCE2694",
+        "domain": "Competitive Coding"
+    },
+    {
         "name": "SAHAS VIVEK",
         "regNo": "20BCE2701",
         "domain": "Frontend Web Development"
@@ -217,6 +247,11 @@
     {
         "name": "SAKSHAM KHURANA",
         "regNo": "20BIT0241",
+        "domain": "Management"
+    },
+    {
+        "name": "SAMAR ABBAS",
+        "regNo": "19BCE0456",
         "domain": "Management"
     },
     {
@@ -243,6 +278,11 @@
         "name": "Subhadip Mondal",
         "regNo": "20BCE0590",
         "domain": "Management"
+    },
+    {
+        "name": "Sudhanshu Gupta",
+        "regNo": "19BCE2674",
+        "domain": "Competitive Coding"
     },
     {
         "name": "SWARUP ATUL",
@@ -290,53 +330,13 @@
         "domain": "Design"
     },
     {
-        "name": "YILMAAS S",
-        "regNo": "20BCE2733",
-        "domain": "Competitive Coding"
-    },
-    {
-        "name": "SAMAR ABBAS",
-        "regNo": "19BCE0456",
-        "domain": "Management"
-    },
-    {
-        "name": "KABIR WADHWA",
-        "regNo": "19BCE2359",
-        "domain": "Unity (AR)"
-    },
-    {
-        "name": "ANSH SHARMA",
-        "regNo": "19BCI0025",
-        "domain": "Competitive Coding"
-    },
-    {
-        "name": "RIYA KUMAR",
-        "regNo": "19BCE2694",
-        "domain": "Competitive Coding"
-    },
-    {
-        "name": "Sudhanshu Gupta",
-        "regNo": "19BCE2674",
-        "domain": "Competitive Coding"
-    },
-    {
-        "name": "RISHABH MISHRA",
-        "regNo": "19BCE2088",
-        "domain": "Mobile App Development"
-    },
-    {
-        "name": "Rasswanth S",
-        "regNo": "19BBS0171",
-        "domain": "Machine Learning"
-    },
-    {
-        "name": "Diya Aryal",
-        "regNo": "19BCE2618",
-        "domain": "Management"
-    },
-    {
         "name": "YASHVI HIMANSHU GAGLANI",
         "regNo": "19BCT0250",
         "domain": "Management"
+    },
+    {
+        "name": "YILMAAS S",
+        "regNo": "20BCE2733",
+        "domain": "Competitive Coding"
     }
 ]
