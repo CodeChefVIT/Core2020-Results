@@ -111,8 +111,11 @@
                                     <label for="regNo">Registration Number</label>
                                 </div>
                                 <div class="center">
-                                    <button name="checkBtn" class="btn btn-result z-depth-0 waves-effect mb-n4"
+                                    <button name="checkBtn" class="btn btn-result z-depth-0 waves-effect mt-3"
                                         id="checkBtn" value="Check" href="#!">Check</button>
+                                </div>
+                                <div class="center mb-n3 mt-4">
+                                    <p id="result"></p>
                                 </div>
                             </div>
                         </div>
@@ -146,6 +149,7 @@
     <!-- Button Click Function and Responses -->
     <script>
         $("#checkBtn").click(function () {
+            document.getElementById("checkBtn").disabled = true;
             var regNo = document.getElementById("regNo").value;
             var audioNope = new Audio('assets/music/dorime.mpeg');
             var audioYep = new Audio('assets/music/sanandreas.mp3');
@@ -161,7 +165,6 @@
                 xh.onload = function () {
                     if (this.status == 200) {
                         var data = JSON.parse(this.responseText);
-                        console.log(data);
                         let counter = 0;
                         for (i = 0; i < data.length; i++) {
                             if (data[i].regNo == regNo) {
@@ -176,22 +179,28 @@
                                     funcs.splice(i - 1, 1)[0]()
                                 }
                                 execute();
-                                M.toast({ html: 'Congratulations ' + data[i].name + '! You have been selected under the ' + data[i].domain + ' domain(s) 🎉' });
+                                // M.toast({ html: 'Congratulations ' + data[i].name + '! You have been selected under the ' + data[i].domain + ' domain(s) 🎉' });
+                                document.getElementById("result").innerHTML = 'Congratulations ' + data[i].name + '! You have been selected under the ' + data[i].domain + ' domain(s) 🎉';
                                 counter++;
+                                document.getElementById("checkBtn").disabled = false;
                             }
                         }
                         if (counter == 0) {
                             audioNope.play();
                             no();
-                            M.toast({ html: 'Unfortunately we cannot extend you an invite right now 😞' });
+                            // M.toast({ html: 'Unfortunately we cannot extend you an invite right now 😞' });
+                            document.getElementById("result").innerHTML = 'Unfortunately we cannot extend you an invite right now 😞';
+                            document.getElementById("checkBtn").disabled = false;
                         }
                     } else {
                         M.toast({ html: 'Something went wrong 😔' });
+                        document.getElementById("checkBtn").disabled = false;
                     }
                 };
             }
             else {
                 M.toast({ html: 'Invalid Registration Number 😢' });
+                document.getElementById("checkBtn").disabled = false;
             }
         });
         $(document).keypress(function (event) {
