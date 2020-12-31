@@ -95,33 +95,32 @@
 
     <!-- Main Content -->
     <div class="container mb-5 mt-5">
-        <!-- Login Form -->
-        <div class="row mt-5">
-            <div class="w-100 w-md-50 mx-auto">
-                <div class="card white card-top-blue">
-                    <div class="card-content">
-                        <span class="card-title black-text">Enter your Registration Number</span>
-                        <div name="loginStud">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix">account_circle</i>
-                                    <input id="regNo" name="regNo" type="text" class="validate"
-                                        pattern="[1-2][0-9][A-Za-z]{3}[0-9]{4}" required
-                                        title="Invalid Registration Number">
-                                    <label for="regNo">Registration Number</label>
-                                </div>
-                                <div class="center">
-                                    <button name="checkBtn" class="btn btn-result z-depth-0 waves-effect mb-n4"
-                                        id="checkBtn" value="Check" href="#!">Check</button>
-                                </div>
-                            </div>
+        <div class="row">
+            <div id="man" class="col s12">
+                <div class="card material-table card-top-green">
+                    <div class="table-header">
+                        <span class="table-title">View All Recruits</span>
+                        <div class="actions">
+                            <a href="#" class="search-toggle waves-effect btn-flat nopadding"><i
+                                    class="material-icons">search</i></a>
                         </div>
                     </div>
+                    <table id="viewAllTable">
+                        <thead>
+                            <tr>
+                                <th>Name </th>
+                                <th>Registration Number</th>
+                                <th>Domain(s) </th>
+                            </tr>
+                        </thead>
+                        <tbody id="viewAllBody">
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-        <div class="center mb-5">
-            <a href="/"><button class="btn btn-result z-depth-0 waves-effect" value="Go Back">Go
+        <div class="center mb-5 mt-4">
+            <a href="/"><button class="btn btn-result-green z-depth-0 waves-effect" value="Go Back">Go
                     Back</button></a>
         </div>
     </div>
@@ -140,67 +139,9 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
         crossorigin="anonymous"></script>
-    <script src="assets/js/animations.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/index.js"></script>
-
-    <!-- Button Click Function and Responses -->
-    <script>
-        $("#checkBtn").click(function () {
-            var regNo = document.getElementById("regNo").value;
-            var audioNope = new Audio('assets/music/dorime.mpeg');
-            var audioYep = new Audio('assets/music/sanandreas.mp3');
-            if (regNo.match(/[1-2][0-9][A-Za-z]{3}[0-9]{4}/)) {
-                var xh = new XMLHttpRequest();
-                xh.open(
-                    "GET",
-                    "assets/core.json",
-                    true
-                );
-                xh.setRequestHeader("Content-Type", "application/json");
-                xh.send();
-                xh.onload = function () {
-                    if (this.status == 200) {
-                        var data = JSON.parse(this.responseText);
-                        console.log(data);
-                        let counter = 0;
-                        for (i = 0; i < data.length; i++) {
-                            if (data[i].regNo == regNo) {
-                                audioYep.play();
-                                var funcs = [
-                                    board,
-                                    winner,
-                                    bravo
-                                ]
-                                function execute() {
-                                    var i = Math.floor(Math.random() * funcs.length)
-                                    funcs.splice(i - 1, 1)[0]()
-                                }
-                                execute();
-                                M.toast({ html: 'Congratulations ' + data[i].name + '! You have been selected under the ' + data[i].domain + ' domain(s) 🎉' });
-                                counter++;
-                            }
-                        }
-                        if (counter == 0) {
-                            audioNope.play();
-                            no();
-                            M.toast({ html: 'Unfortunately we cannot extend you an invite right now 😞' });
-                        }
-                    } else {
-                        M.toast({ html: 'Something went wrong 😔' });
-                    }
-                };
-            }
-            else {
-                M.toast({ html: 'Invalid Registration Number 😢' });
-            }
-        });
-        $(document).keypress(function (event) {
-            var keycode = (event.keyCode ? event.keyCode : event.which);
-            if (keycode == '13') {
-                $("#checkBtn").trigger('click');
-            }
-        });
-    </script>
+    <script src="assets/js/viewAll.js"></script>
 
 </body>
 

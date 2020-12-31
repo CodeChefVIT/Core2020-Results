@@ -1,32 +1,35 @@
 <p align="center"><a href="https://www.codechefvit.com" target="_blank"><img src="https://s3.amazonaws.com/codechef_shared/sites/all/themes/abessive/logo-3.png" title="CodeChef-VIT" alt="Codechef-VIT"></a>
 </p>
 
-# Project Title
+# CodeChef-VIT Recruitment Results 2020
 
 > <Subtitle>
-> Include project description here.
+> Results website for the newly recruited Core Members from the recruitments of December 2020 for all domains.
 
 ---
-[![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](INSERT_LINK_FOR_DOCS_HERE) 
-  [![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](INSERT_UI_LINK_HERE)
+[![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](https://result.codechefvit.com)
 
 ## Features
-- Insert list of features here
+- VTOP Themed
+- Search By Registration Number
+- View All Recruits
+- Responsive
+- Searchable and Sortable Table
 
 ## Screenshots
-<img src="https://github.com/akshatvg/common-entry-test/raw/master/static/img/header.png" alt="Project Screenshots">
+<p align="center">
+<img src="https://i.ibb.co/FxtSRtK/vtop-theme1.png" alt="Project Screenshots"><img src="https://i.ibb.co/6XPxcfz/vtop-theme2.png" alt="Project Screenshots"><img src="https://i.ibb.co/vwS33QF/vtop-theme3.png" alt="Project Screenshots">
+</p>
 
 ## Instructions to run
 ```
-$ git clone https://github.com/CodeChefVIT/<Project>
-$ cd <Project>
-$ pip3 install -r requirements.txt
-$ python3 manage.py runserver
+$ git clone https://github.com/CodeChefVIT/Core2020-Results
+$ cd Core2020-Results
+$ live-server
 ```
 
 ## Contributors
-- <a href="https://github.com/<Contributor>">Contributor Name</a>
-- <a href="https://github.com/<Contributor>">Contributor Name</a>
+- <a href="https://github.com/akshatvg">Akshat Gupta</a>
 
 ## License
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
