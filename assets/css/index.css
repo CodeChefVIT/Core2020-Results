@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Defaults */
+html,
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+/* Button Outline */
+button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    width: 96px;
+    height: 96px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: white;
+    -webkit-box-shadow: 0 24px 64px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.24);
+    border-radius: 16px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
+    -o-transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
+    transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
+    z-index: 9000000;
+}
+
+#loader.fullscreen {
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    background-color: white;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#loader.show {
+    -webkit-transition: opacity 0.4s ease-out, visibility 0s linear 0s;
+    -o-transition: opacity 0.4s ease-out, visibility 0s linear 0s;
+    transition: opacity 0.4s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+#loader .circular {
+    -webkit-animation: loader-rotate 2s linear infinite;
+    animation: loader-rotate 2s linear infinite;
+    position: absolute;
+    left: calc(50% - 24px);
+    top: calc(50% - 24px);
+    display: block;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+#loader .path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    -webkit-animation: loader-dash 1.5s ease-in-out infinite;
+    animation: loader-dash 1.5s ease-in-out infinite;
+    stroke-linecap: round;
+}
+
+@-webkit-keyframes loader-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loader-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -136px;
+    }
+}
+
+@keyframes loader-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -136px;
+    }
+}
+
+/* Outline */
+input {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+input:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+button {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+button:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* Error Messages */
+#errorHandler {
+    color: red;
+}
+
+/* Sidenav */
+#sidenav-1 {
+    border-right: 15px solid #2880B9;
+    color: black;
+}
+
+/* Navbar */
+.nav-wrapper {
+    background-color: #2880B9;
+    color: #EEEEEE;
+}
+
+/* Active Sidebar */
+#active {
+    color: #2880B9;
+}
+
+#active-icon {
+    color: #2880B9;
+}
+
+#active::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 0;
+    top: 15px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 20px solid #2880B9;
+}
+
+/* Overlap Main Remove */
+header {
+    padding-left: 80px;
+}
+
+/* Divider */
+.divider {
+    border: 1px solid #2880B9;
+    width: 100%;
+}
+
+.border-bottom-md {
+    border-bottom: 2px solid #2880B9;
+    width: 175px;
+}
+
+.border-bottom-sm {
+    border-bottom: 2px solid #2880B9;
+    width: 120px;
+}
+
+/* Heading */
+.heading {
+    font-weight: bolder;
+}
+
+/* Navbar Brand */
+.brand {
+    font-size: 30px;
+}
+
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Displays */
+.d-inline {
+    display: inline !important
+}
+
+.d-none {
+    display: none !important
+}
+
+/* Border Radius */
+.border-radius-5 {
+    border-radius: 5px;
+}
+
+.border-radius-10 {
+    border-radius: 10px;
+}
+
+.border-radius-15 {
+    border-radius: 15px;
+}
+
+.border-radius-20 {
+    border-radius: 20px;
+}
+
+.border-bottom-r-10 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Modals */
+#modal {
+    transform: translateY(7%) scaleX(1) !important;
+}
+
+/* Text Colored */
+.text-colored {
+    color: #2880B9 !important;
+}
+
+.text-colored-green {
+    color: #5CB85B !important;
+}
+
+.text-colored-lightblue {
+    color: #00C0EF !important;
+}
+
+.text-colored-orange {
+    color: orange !important;
+}
+
+/* Buttons */
+.btn-result {
+    color: white;
+    background-color: #2880B9;
+    border: 1px solid #2880B9;
+    border-radius: 5px;
+}
+
+.btn-result:hover,
+.btn-result:focus {
+    background-color: transparent;
+    color: #2880B9;
+    border: 1px solid #2880B9;
+}
+
+.btn-result-green {
+    color: white;
+    background-color: #5CB85B;
+    border: 1px solid #5CB85B;
+    border-radius: 5px;
+}
+
+.btn-result-green:hover,
+.btn-result-green:focus {
+    background-color: transparent;
+    color: #5CB85B;
+    border: 1px solid #5CB85B;
+}
+
+.btn-result-lightblue {
+    color: white;
+    background-color: #00C0EF;
+    border: 1px solid #00C0EF;
+    border-radius: 5px;
+}
+
+.btn-result-lightblue:hover,
+.btn-result-lightblue:focus {
+    background-color: transparent;
+    color: #00C0EF;
+    border: 1px solid #00C0EF;
+}
+
+/* Card-Top */
+.card-top-blue {
+    border-top: 3px solid #2880B9;
+}
+
+.card-top-green {
+    border-top: 3px solid #5CB85B;
+}
+
+.card-top-orange {
+    border-top: 3px solid orange;
+}
+
+.card-top-lightblue {
+    border-top: 3px solid #00C0EF;
+}
+
+/* Some Sizing */
+.w-100 {
+    width: 100% !important;
+}
+
+.h-65 {
+    height: 65vh !important;
+}
+
+.material-icons {
+    cursor: pointer;
+}
+
+@media only screen and (max-width:780px) {
+    .h-65 {
+        height: 30vh !important;
+    }
+}
+
+.w-70 {
+    width: 70% !important;
+}
+
+@media only screen and (min-width:780px) {
+    .w-md-20 {
+        width: 20% !important;
+        text-align: center;
+    }
+
+    .w-md-70 {
+        width: 70% !important;
+        text-align: center;
+    }
+
+    .w-md-50 {
+        width: 50% !important;
+        text-align: center;
+    }
+
+
+    .center-big {
+        text-align: center;
+    }
+}
+
+/* Labels */
+.input-field label {
+    color: #000;
+}
+
+/* Form Inputs */
+.input-field input[type=text]:focus+label {
+    color: #000;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+.input-field .prefix.active {
+    color: #000;
+}
+
+/* Underline */
+.underline {
+    text-decoration: underline;
+    text-decoration-color: #000;
+}
