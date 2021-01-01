@@ -20,11 +20,6 @@
     "domain": "Editorial"
   },
   {
-    "name": "Neel Ghoshal",
-    "regNo": "20BCE2165",
-    "domain": "Machine Learning"
-  },
-  {
     "name": "ANOUSHKA SHRESTH",
     "regNo": "20BCE2305",
     "domain": "Design"
@@ -188,6 +183,11 @@
     "name": "MRINAL AGARWAL",
     "regNo": "20BCE0485",
     "domain": "Management"
+  },
+  {
+    "name": "Neel Ghoshal",
+    "regNo": "20BCE2165",
+    "domain": "Machine Learning"
   },
   {
     "name": "NITISH KUMAR",
