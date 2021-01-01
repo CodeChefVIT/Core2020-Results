@@ -87,7 +87,7 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper center">
-                <a href="/" class="center brand">CC Results
+                <a href="/" class="center brand">Core 2020-21
                 </a>
             </div>
         </nav>
@@ -152,7 +152,6 @@
         $("#checkBtn").click(function () {
             document.getElementById("checkBtn").disabled = true;
             var regNo = document.getElementById("regNo").value;
-            var audioNope = new Audio('assets/music/dorime.mpeg');
             var audioYep = new Audio('assets/music/sanandreas.mp3');
             if (regNo.match(/[1-2][0-9][A-Za-z]{3}[0-9]{4}/)) {
                 var xh = new XMLHttpRequest();
@@ -187,10 +186,9 @@
                             }
                         }
                         if (counter == 0) {
-                            audioNope.play();
-                            no();
-                            // M.toast({ html: 'Unfortunately we cannot extend you an invite right now 😞' });
-                            document.getElementById("result").innerHTML = 'Unfortunately we cannot extend you an invite right now 😞';
+                            // M.toast({ html: 'We are really glad you applied to be a part of our family. Your application and interviews were amazing but unfortunately we cannot extend you an invite to CodeChef-VIT\'s core 😞' });
+                            // M.toast({ html: 'You can still join us for our events, webinars, hackathons, projects and get mentorship. We are just a text away ✨' });
+                            document.getElementById("result").innerHTML = 'We are really glad you applied to be a part of our family. Your application and interviews were amazing but unfortunately we cannot extend you an invite to CodeChef-VIT\'s core 😞<br><br> You can still join us for our events, webinars, hackathons, projects and get mentorship. We are just a text away ✨';
                             document.getElementById("checkBtn").disabled = false;
                         }
                     } else {
