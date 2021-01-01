@@ -107,7 +107,7 @@
                                     <i class="material-icons prefix">account_circle</i>
                                     <input id="regNo" name="regNo" type="text" class="validate"
                                         pattern="[1-2][0-9][A-Za-z]{3}[0-9]{4}" required
-                                        title="Invalid Registration Number">
+                                        title="Invalid Registration Number" style="text-transform:uppercase">
                                     <label for="regNo">Registration Number</label>
                                 </div>
                                 <div class="center">
@@ -133,7 +133,8 @@
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
             <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-                stroke="#107BE5" /></svg></div>
+                stroke="#107BE5" />
+        </svg></div>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -167,7 +168,7 @@
                         var data = JSON.parse(this.responseText);
                         let counter = 0;
                         for (i = 0; i < data.length; i++) {
-                            if (data[i].regNo == regNo) {
+                            if (data[i].regNo == regNo.toUpperCase()) {
                                 audioYep.play();
                                 var funcs = [
                                     board,
