@@ -1,10 +1,10 @@
-function bravo() {
-    let data = 'https://weichiachang.github.io/easter-eggs-mobile/images/bravo.gif'
+function passed() {
+    let data = './assets/img/passed.gif'
     var img = new Image();
     img.src = data;
     img.style.pointerEvents = "none";
     img.style.width = '374px';
-    img.style.height = '500px';
+    // img.style.height = '500px';
     img.style.transition = '1s all';
     img.style.position = 'fixed';
     img.style.left = '-374px';
@@ -40,12 +40,12 @@ function winner() {
     }, 4300);
 }
 
-function board() {
-    let data = 'https://weichiachang.github.io/easter-eggs-mobile/images/board.gif'
+function leo() {
+    let data = '../assets/img/leo.gif'
     var img = new Image();
     img.src = data;
     img.style.pointerEvents = "none";
-    img.style.width = '350px';
+    // img.style.width = '350px';
     img.style.height = '350px';
     img.style.transition = '6s all linear';
     img.style.position = 'fixed';
